@@ -79,8 +79,5 @@ const basedatos = new mongoose.Schema({
         type: Number
     },
 })
-
 var exportaBaseDatos = mongoose.model('base', basedatos,'base');
-
-
 module.exports = { exportaBaseDatos }

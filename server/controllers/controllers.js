@@ -2,7 +2,6 @@ const {exportaBaseDatos} = require('../models/model');
 const {modelUser} = require('../models/user')
 
 module.exports = {
-    //-------------------POSTS----------------------------------
     postBase: async (req, res) => {
         let data = new exportaBaseDatos({
             shablon_borrado: req.body.shablon_borrado,
@@ -47,9 +46,6 @@ module.exports = {
             res.status(400).json({message: error.message})
         }
     },
-    //-------------------FINAL POSTS----------------------------------
-
-    //----------------------------PATCHS----------------------------------- 
     updateBase:  async (req, res) => {
         try {
             const id = req.params.id;
